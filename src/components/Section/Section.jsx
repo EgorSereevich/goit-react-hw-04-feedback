@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { SectionObj, Header } from './Section.styled';
 export const Section = ({ title, children }) => {
   return (
@@ -7,4 +8,8 @@ export const Section = ({ title, children }) => {
       {children}
     </SectionObj>
   );
+};
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.any.isRequired,
 };
